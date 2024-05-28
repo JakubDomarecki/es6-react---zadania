@@ -48,3 +48,40 @@ const products = [
     condition: 'new',
   },
 ];
+
+const allProductsList = document.getElementById('all-products');
+const filteredProductsList = document.getElementById('filtered-products');
+
+//przed
+products.forEach(product => {
+  const listItem = document.createElement('li');
+  const productName = document.createElement('strong');
+  const productPrice = document.createElement('span');
+
+  productName.textContent = product.name;
+  productPrice.textContent = `, ${product.price} zł - ${product.condition}`;
+
+  listItem.appendChild(productName);
+  listItem.appendChild(productPrice);
+  allProductsList.appendChild(listItem);
+
+  // 2 sposob
+  // listItem.innerHTML = `<li><strong>${product.name}</strong><span>, cena produktu - ${product.price} zł - ${product.condition}</span></li>`;
+  // allProductsList.appendChild(listItem);
+});
+
+
+//po
+const filteredProducts = products.filter(function (product) {
+  return product.category === 'car'  && product.condition === 'new'  && product.price <= 45000;
+});
+filteredProducts.forEach(function (product) {
+  const listItem = document.createElement('li');
+  const productName = document.createElement('strong');
+  const productPrice = document.createElement('span');
+  productName.textContent = product.name;
+  productPrice.innerText = `, ${product.price} zł - ${product.condition}`;
+  listItem.appendChild(productName);
+  listItem.appendChild(productPrice);
+  filteredProductsList .appendChild(listItem);
+});

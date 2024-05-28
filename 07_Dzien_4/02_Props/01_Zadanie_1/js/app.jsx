@@ -3,4 +3,22 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+const Hello = (props) => {
+    const {name, surname} = props;
+
+    return <h1>Hello {name} {surname}</h1>;
+};
+
+
+class HelloClass extends Component {
+    render() {
+        const {name, surname} = this.props;
+
+        return <h1>Hello, {name} {surname}</h1>;
+    }
+}
+
+
+root.render(<HelloClass name={"Paweł"} surname={"Strumiński"} />);

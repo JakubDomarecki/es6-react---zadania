@@ -3,4 +3,20 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+import people from './data/people';
+
+const App = () => {
+    return (
+        <>
+            {people.map(item => (
+                <div key={item.id}>
+                    <p>{item.name}</p>
+                    <p>{item.surname}</p>
+                </div>
+            ))}
+        </>
+    );
+};
+
+root.render(<App />);

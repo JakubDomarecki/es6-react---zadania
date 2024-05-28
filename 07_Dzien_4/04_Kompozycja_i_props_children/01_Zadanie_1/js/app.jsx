@@ -3,4 +3,29 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+
+const GrandChildComponent = ({children}) => {
+    return <div>{children}</div>;
+};
+
+const ChildComponent = ({children}) => {
+    return <GrandChildComponent>{children}</GrandChildComponent>;
+};
+
+const ParentComponent = ({children}) => {
+    return <ChildComponent>{children}</ChildComponent>;
+};
+
+const App = () => {
+    return(
+        <ParentComponent>
+            <h1>To działa!</h1>
+        </ParentComponent>
+    );
+};
+
+
+
+root.render(<App/>);

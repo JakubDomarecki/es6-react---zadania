@@ -3,4 +3,20 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+const App = () => {
+    const A = parseFloat(prompt('Podaj liczbę A'));
+    const B = parseFloat(prompt('Podaj liczbę B'));
+
+    return (
+        <div>
+            <h2>Wynik dodawania: {A + B}</h2>
+        </div>
+    );
+};
+
+
+
+root.render(<App />);
+

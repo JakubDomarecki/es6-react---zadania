@@ -1,3 +1,6 @@
+export { Polygon };
+// export default Polygon;
+
 class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';

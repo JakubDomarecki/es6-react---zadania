@@ -3,4 +3,16 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+const LikeBox = () => {
+  return (
+      <div>
+          <p>100 likes</p>
+          <button>lubię to</button>
+      </div>
+  );
+};
+
+
+root.render(<LikeBox/>);

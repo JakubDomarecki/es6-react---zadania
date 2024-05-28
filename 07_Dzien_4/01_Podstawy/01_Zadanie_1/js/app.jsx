@@ -3,4 +3,27 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+const SearchBar = () => {
+    return (
+        <div>
+            <input type="text" />
+            <button>Wyszukaj</button>
+        </div>
+    );
+};
+
+class SearchBarClass extends Component {
+    render() {
+        return (
+            <div>
+                <input type="text" />
+                <button>Wyszukaj</button>
+            </div>
+        );
+    };
+}
+
+
+root.render(<SearchBarClass />);

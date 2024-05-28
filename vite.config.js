@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 /**
  * Path to exercise folder
  */
-const exercisePath = "";
+const exercisePath = "07_Dzien_4/05_Podsumowanie/01_Zadanie";
 
 /**
  * Don't change those lines below

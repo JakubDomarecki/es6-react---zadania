@@ -1,16 +1,9 @@
 import Calculator from './Calculator';
 
 class DecCalculator extends Calculator {
-  constructor(selector) {
-    super(selector);
+  constructor() {
+    super();
     this.$tooltip = this.$calculatorDOMElement.querySelector('.popover');
-  }
-
-  changeNumber(parentElement) {
-    const input = parentElement.firstElementChild;
-    input.contentEditable = true;
-    input.focus();
-    this.showTooltip('Naciśnij aby dodać wartości');
   }
 
   showTooltip(text) {
@@ -20,6 +13,13 @@ class DecCalculator extends Calculator {
 
   hideTooltip() {
     this.$tooltip.classList.remove('show');
+  }
+
+  changeNumber(parentElement) {
+    const input = parentElement.firstElementChild;
+    input.contentEditable = true;
+    input.focus();
+    this.showTooltip('Naciśnij aby dodać wartości');
   }
 
   add(numbersX, numbersY) {

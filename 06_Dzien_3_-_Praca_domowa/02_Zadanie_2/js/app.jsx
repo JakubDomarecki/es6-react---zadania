@@ -3,4 +3,18 @@ import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<h1>Hello, World!</h1>);
+
+
+const colors = ["blue", "green", "pink", "yellow", "black"];
+
+const App = () => {
+  return (
+      <div>
+        <p> {colors.join(" ")}</p>
+      </div>
+  );
+};
+
+
+
+root.render(<App />);
