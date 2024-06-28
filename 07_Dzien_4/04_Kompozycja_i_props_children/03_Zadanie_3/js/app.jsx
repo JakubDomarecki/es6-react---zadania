@@ -108,7 +108,7 @@ class ShopItemHeader extends Component {
                 <h1>{title}</h1>
                 <img src={image} alt="image" />
             </header>
-        )
+        );
     }
 }
 
@@ -123,7 +123,7 @@ class ShopList extends Component {
                 ))}
 
             </div>
-        )
+        );
     }
 }
 
@@ -148,7 +148,7 @@ class App extends Component {
 
         return (
             <ShopList items={items} />
-        )
+        );
     }
 }
 
