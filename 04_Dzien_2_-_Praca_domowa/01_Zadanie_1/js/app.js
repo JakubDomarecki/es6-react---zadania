@@ -6,9 +6,6 @@ class Insect {
 }
 
 class  Centipede  extends Insect{
-    constructor(name) {
-        super(name, 20);
-    }
     getLegs() {
         return (`Cześć mam na imię ${this.name} jestem stonogą i mam ${this.legs} nóg`);
     };
@@ -16,9 +13,6 @@ class  Centipede  extends Insect{
 
 
 class  Spider  extends Insect{
-    constructor(name) {
-        super(name, 8);
-    }
     getLegs() {
         return (`Cześć mam na imię ${this.name} jestem pająkiem i mam ${this.legs} nóg`);
     };
